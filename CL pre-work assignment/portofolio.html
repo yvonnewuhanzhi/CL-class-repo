@@ -1,0 +1,155 @@
+<html>
+
+<head>
+    <title> MYSTIC GROVE</title>
+    <link href="./style.css" rel="stylesheet" />
+    <style>
+        .center-image {
+            text-align: center;
+            display: grid;
+            place-items: center;
+            min-height: 100vh;
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .box2 {
+            width: 100%;
+            height: 100%;
+            background-image: url("./莫兰迪色.jpg");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            position: fixed;
+            z-index: -1;
+
+        }
+
+        p,
+        td {
+            color: rgba(0, 0, 0, 0.8);
+            font-size: 20px;
+            font-weight: 100;
+            font-family: "Microsoft YaHei";
+            text-indent: 50px;
+        }
+
+        p,
+        h1,
+        a,
+        td {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        span,a{
+            font-weight: 500;
+            font-style: italic;
+        }
+
+        table,
+        td {
+            
+            border: 2px solid #e2b69b;
+            border-collapse: collapse;
+            text-align: left;
+            background-color: #fdf7ee;
+            color: black
+        }
+
+        .tablebold {
+            color: rgb(180, 121, 121);
+            text-align: left;
+            font-size: 30px;
+            font-weight: 400;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box2"></div>
+
+    <div class="center-image">
+        <h1>Welcome To My Mystic Grove</h1>
+        <img src="../CL pre-work assignment/ima期末/mystic grove 1.jpeg" width="700px" height="500px"><br>
+        <a href="https://editor.p5js.org/YvonneWu/sketches/WlZ_yz_8L ">The code of my project</a>
+        <h1>My inspiration</h1>
+        <p>I usually have the habit of listening to light music, and one of my favorite pieces of music is the
+            background
+            music in this project. There is a slight sound of fireflies in this music and the overall rhythm is very
+            calm.
+            So whenever I'm stressed I listen to this music and it makes me feel calm and meditative.
+
+            One day, while I was listening to this music and scrolling through xiaohongshu for inspiration for my final
+            project, I came across this simple illustration— <span>Dreamy purple woods with cute little deer</span>.It
+            gave
+            me INSPIRATION to think that I can build a forest of my own.</p>
+
+        <h1>My idea</h1>
+        <p>I was planning to make <span>an interactive toy for children</span>—mystic grove. For this final project I
+            combined <span>Arduino and p5</span> to create a small forest.</p>
+        <p>This is a mysterious black cardboard box, when the child holds a flashlight and shines it on all corners of
+            the
+            cardboard box, it will trigger some interactive organs in the forest, for example, the owl's eyes glow (the
+            LEDs
+            light up), the deer by the creek lifts its head(with servo motors), and the stars sparkling in the
+            background.
+            They are all connected to the p5js to make the sound of the grass,stars, and the following animation.</p>
+        <p><span>For the Arduino part</span>, I will be using 3 photoresistors, three photoresistors will trigger three
+            interactive effects inside the cardboard box. Five white LEDs light up to represent stars twinkling, two
+            yellow
+            LEDs light up to represent an owl's eyes glowing, and the rotation of a servomotor prompts the deer's head
+            to
+            rotate.<br> <span>For the P5 part</span>, I added the background light music. In the initial state, there
+            are
+            fireflies flashing on the screen.When the flashlight finds the three photoresistors of the arduino, p5 will
+            have
+            the effects of a deer appearing, a star blinking, and a falling leaf on the screen, which use the functions
+            of
+            picture, random, and class, respectively.</p>
+        <h1>Materials that I need</h1>
+        <table>
+            <tr>
+                <td class="tablebold">Material</td>
+                <td class="tablebold">Quantity</td>
+            </tr>
+            <tr>
+                <td>servomotor</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Photoresistor</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>Breadboard</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>LED</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>Cardboard</td>
+                <td>several</td>
+            </tr>
+            <tr>
+                <td>White acrylic sheet</td>
+                <td>1</td>
+            </tr>
+        </table>
+        <h1>reference images</h1>
+        <img src="../CL pre-work assignment/ima期末/reference picture 1.png" alt="the reference image">
+        <h1>My draft</h1>
+        <img src="../CL pre-work assignment/ima期末/draft.jpeg" width="600px" height="900px">
+    </div>
+</body>
+
+</html>
