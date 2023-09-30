@@ -143,45 +143,48 @@ window.addEventListener('load', function(){
     fetch("harrypotter.json")
       .then(response => response.json())
       .then(data => {
-        let characterInfo = data.characters.find(character => character.name === inputText);
 
-        if (characterInfo) {
-          // console.log("Character information:", characterInfo);
+        // prepare elements instead of selecting them every time
+        const headingElement = document.getElementById('p-name');
+        const genderElement = document.getElementById('p-gender');
+        const houseElement = document.getElementById('p-house');
+        const dateOfBirthElement = document.getElementById('p-dateOfBirth');
+        const ancestryElement = document.getElementById('p-ancestry');
+        const imageElement = document.getElementById('p-img');
 
-          let headingElement = document.getElementById('p-name');
-          headingElement.innerHTML = "Name: " + characterInfo.name; // 使用 characterInfo 中的数据
+        // use string.`includes` so we do not have to type the whole name
+        let characterInfo = data.characters.find(character => character.name.includes(inputText));
 
-          let genderElement = document.getElementById('p-gender');
-          genderElement.innerHTML =  "Gender: " +characterInfo.gender; // 使用 characterInfo 中的数据
-
-          let houseElement = document.getElementById('p-house');
-          houseElement.innerHTML = "House: " +characterInfo.house; // 使用 characterInfo 中的数据
-
-          let dateOfBirthElement = document.getElementById('p-dateOfBirth');
-          dateOfBirthElement.innerHTML ="Birthday:" +characterInfo.dateOfBirth; // 使用 characterInfo 中的数据
-
-          let ancestryElement = document.getElementById('p-ancestry');
-          ancestryElement.innerHTML = "Ancestry:"+characterInfo.ancestry; // 使用 characterInfo 中的数据
-
-          let imageElement = document.getElementById('p-img');
-          imageElement.src = characterInfo.image; // 设置 <img> 元素的 src 属性为角色的图像 URL
-          imageElement.alt = characterInfo.name; // 设置 <img> 元素的 alt 属性为角色的名字
-        } else {
-          let headingElement = document.getElementById('p-name');
-          headingElement.innerHTML = "Name: Not Found";
-
-          let genderElement = document.getElementById('p-gender');
-          genderElement.innerHTML =  "Gender: Not Found";
-
-          let houseElement = document.getElementById('p-house');
-          houseElement.innerHTML = "House: Not Found";
-
-          let dateOfBirthElement = document.getElementById('p-dateOfBirth');
-          dateOfBirthElement.innerHTML ="Birthday: Not Found";
-
-          let ancestryElement = document.getElementById('p-ancestry');
-          ancestryElement.innerHTML = "Ancestry: Not Found";
+        if (!characterInfo) {
+          // set characterInfo to an empty object or we have to check if characterInfo is null
+          characterInfo = {};
         }
+
+        // use `||` to set a default value if the property is not found
+        // `||` means "or" in JavaScript
+        const name = characterInfo.name || "Not Found";
+        const gender = characterInfo.gender || "Not Found";
+        const house = characterInfo.house || "Not Found";
+        const dateOfBirth = characterInfo.dateOfBirth || "Not Found";
+        const ancestry = characterInfo.ancestry || "Not Found";
+
+        headingElement.innerHTML = "Name: " + name;
+        genderElement.innerHTML = "Gender: " + gender;
+        houseElement.innerHTML = "House: " + house;
+        dateOfBirthElement.innerHTML = "Birthday: " + dateOfBirth;
+        ancestryElement.innerHTML = "Ancestry: " + ancestry;
+
+        if (characterInfo.image) {
+          imageElement.src = characterInfo.image;
+          imageElement.alt = characterInfo.name;
+        } else {
+          // set image to empty if no image is found
+          // so the previous image is not shown
+          // you can also set a default image
+          imageElement.src = "";
+          imageElement.alt = "";
+        }
+        
       });
   
 
