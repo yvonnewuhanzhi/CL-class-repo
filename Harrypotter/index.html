@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply to Hogwarts</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;1,200&family=Black+Ops+One&family=Calistoga&family=Kenia&family=Roboto+Condensed:wght@300&family=Skranji&family=UnifrakturCook:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;1,200&family=Black+Ops+One&family=Calistoga&family=Kenia&family=Mooli&family=Roboto+Condensed:wght@300&family=Skranji&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Julee&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- welcomepage -->
+    <section class="section1">
+        <img src="./Welcome.png" id="welcome" class="fade-in-text" alt="">
+        <button id="explore">Explore it</button>
+    </section>
+
+
+    <!-- Hogwarts Introduction page -->
+    <section class="section2">
+        <img src="./footprints.png" class="footprint1" alt="">
+        <div class="div2">
+            <h4 class="HogwartsIntro" id="introParagraph">Hogwarts is a full-time magical boarding school founded around 990 A.D.<br>
+                It is located in a secluded location in Scotland, England, where the exact location <br>cannot be
+                located
+                and only those with magical abilities can see it. <br>The school is considered to be one of the best
+                magical
+                institutions in the wizarding world.<br>...CLICK HERE...</h4>
+
+        </div>
+        <img src="./footprints.png" class="footprint2" alt="">
+
+    </section>
+
+
+    <!-- Hogwarts houses page -->
+    <section class="section3">
+        <img class="logo" src="./LOGO.png" alt="">
+        <p class="intro">Hogwarts School of Witchcraft and Wizardry is divided into four houses :<br>
+            Gryffindor, Hufflepuff, Ravenclaw and Slytherin.<br>
+            Each house has its own unique character and spirit.<br>Choose the house that you like...</p>
+        <div class="houses">
+            <img src="./red.png" id="red" alt="">
+            <img src="./yellow.png" id="yellow" alt="">
+            <img src="./blue.png" id="blue" alt="">
+            <img src="./green.png" id="green" alt="">
+
+        </div>
+
+    </section>
+
+
+    <!-- Hogwarts houses Introduction page -->
+    <section class="section4">
+        <div class="housebg" id="housebg">
+            <img src="./redbg.png" id="redbg" alt="">
+            <p data-target="section5">Learn more</p>
+            <img src="./yellowbg.png" id="yellowbg" alt="">
+            <p data-target="section5">Learn more</p>
+            <img src="./bluebg.png" id="bluebg" alt="">
+            <p data-target="section5">Learn more</p>
+            <img src="./greenbg.png" id="greenbg" alt="">
+            <p data-target="section5">Learn more</p>
+        </div>
+    </section>
+    
+
+
+    <section class="section5">
+
+    <h1 class="project-heading">Harry Potter's Character:<span id="character-name"></span></h1>
+
+    <section class="project-container">
+        <h2 class="project-sub-heading">Enter Character's Name :</h2>
+        <div class="project-entry">
+            <input id="character-input"></input>
+            <button id="character-button">Get info!</button>
+        </div>
+
+
+        <div class="character-info">
+            <h3 class="character-name" id="p-name"></h3>
+            <p class="character-gender" id="p-gender"></p>
+            <p class="character-house" id="p-house"></p>
+            <p class="character-dateOfBirth" id="p-dateOfBirth"></p>
+            <p class="character-ancestry" id="p-ancestry"></p>
+            <img class="character-image" id="p-img" />
+        </div>
+    </section>
+</section>
+    <script src="app.js"></script>
+</body>
+
+</html>
