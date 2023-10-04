@@ -202,6 +202,7 @@ function preload() {
 function setup() {
   createCanvas(windowWidth, windowHeight);
   frameRate(120);
+  background(0, 0);
 }
 
 function loaded() {
@@ -209,7 +210,9 @@ function loaded() {
 }
 
 function draw() {
-  background(0, 30); 
+  erase(30);
+  rect(0, 0, width, height);
+  noErase();
   fill(255);
   noStroke();
   circle(mouseX, mouseY, 10);
